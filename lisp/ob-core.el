@@ -1874,9 +1874,9 @@ region is not active then the point is demarcated."
 		 (delete-region (point-at-bol) (point-at-eol)))
                (insert (concat
 			(if (looking-at "^") "" "\n")
-			indent (funcall (if lower-case-p 'downcase 'upcase) "#+end_src\n")
+			indent (funcall (if lower-case-p 'downcase 'upcase) "#+END_SRC\n")
 			(if arg stars indent) "\n"
-			indent (funcall (if lower-case-p 'downcase 'upcase) "#+begin_src ")
+			indent (funcall (if lower-case-p 'downcase 'upcase) "#+BEGIN_SRC ")
 			lang
 			(if (> (length headers) 1)
 			    (concat " " headers) headers)
@@ -1897,12 +1897,12 @@ region is not active then the point is demarcated."
 		   (if (org-region-active-p) (mark) (point)) (point))))
 	(insert (concat (if (looking-at "^") "" "\n")
 			(if arg (concat stars "\n") "")
-			(funcall (if lower-case-p 'downcase 'upcase) "#+begin_src ")
+			(funcall (if lower-case-p 'downcase 'upcase) "#+BEGIN_SRC ")
 			lang "\n"
 			body
 			(if (or (= (length body) 0)
 				(string-match "[\r\n]$" body)) "" "\n")
-			(funcall (if lower-case-p 'downcase 'upcase) "#+end_src\n")))
+			(funcall (if lower-case-p 'downcase 'upcase) "#+END_SRC\n")))
 	(goto-char start) (move-end-of-line 1)))))
 
 (defvar org-babel-lob-one-liner-regexp)
