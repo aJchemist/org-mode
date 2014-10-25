@@ -1,3 +1,12 @@
 [submodule "testing/jump"]
 	path = testing/jump
 	url = https://github.com/eschulte/jump.el.git
+[submodule "submods/org-impress-js"]
+	path = submods/org-impress-js
+	url = https://github.com/kinjo/org-impress-js.el
+[submodule "submods/org-reveal"]
+	path = submods/org-reveal
+	url = https://github.com/yjwen/org-reveal.git
+[submodule "submods/org-tree-slide"]
+	path = submods/org-tree-slide
+	url = https://github.com/takaxp/org-tree-slide.git
